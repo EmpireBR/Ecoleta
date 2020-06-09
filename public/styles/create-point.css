@@ -1,0 +1,200 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+
+    /* Alinhamento de caixa (pelo lado de fora da caixa) */
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Configura a seta da 'frase voltar para home' */
+#page-create-point header a span {
+    margin-right: 16px;
+    background-image: url('../assets/arrow-left.svg');
+
+    display: flex;
+
+    width: 20px;
+    height: 24px;
+}
+
+/* CONFIGURANDO A TELA 'CADASTRO DO PONTO DE COLETA' */
+form {
+    background-color: white;
+
+    margin: 80px auto;
+
+    /* Preenchimento da caixa */
+    padding: 64px;
+    
+    border-radius: 8px;
+
+    max-width: 730px;
+}
+
+/* Em todos os textos H1 do Form, vai ter a fonte de 36 pixels */
+form h1 {
+    font-size: 36px;
+}
+
+/* Todo Fieldset dentro do Form */
+form fieldset {
+    margin-top: 64px;
+    
+    border: 0;
+}
+
+/* Em todo Legend dentro de Form */
+form legend {
+    margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+/* Em todo texto em h2 dentro de Legend, a fonte vai pra 24 pixels */
+form legend h2 {
+    font-size: 24px;
+}
+
+form legend span {
+    font-size: 14px;
+    color: var(--title-color);
+}
+
+/* Em todo FIELD dentro de Form */
+form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 24px;
+}
+
+form .field-group {
+    display: flex;
+}
+
+form input,
+form select {
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    border-radius: 8px;
+
+    /* Borda preta contornando as caixas de input */
+    /* outline: none; */
+}
+
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Em um field seguido de outro field (Endereço e Número/Complemento) */
+form .field-group .field + .field {
+    margin-left: 24px;
+}
+
+/* Mechendo no botão */
+form button {
+    width: 260px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    border: 0;
+
+    margin-top: 40px;
+
+    transition: background-color 400ms;
+}
+
+/* Quando passar o mouse em cima do botão */
+form button:hover {
+    background-color: #2fb86e;
+}
+
+/* CONFIGURANDO A PARTE 'ITENS DE COLETA' */
+.items-grid {
+
+    /* Deixando os itens em colunas */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+/* Mechendo em cada um dos itens de coleta (papelão, pilhas etc) */
+.items-grid li {
+    background-color: #f1f1f1;
+    list-style: none;
+
+    border: 2px solid #f1f1f1;
+    border-radius: 8px;
+    height: 180px;
+
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    /* Muda o jeito do mouse quando entra em alguma caixa de itens */
+    cursor: pointer;
+}
+
+.items-grid li span {
+    margin-top: 12px;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+/* Vai procurar dentro de LI quem tem a classe 'Selected' */
+.items-grid li.selected {
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none;
+}

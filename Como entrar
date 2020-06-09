@@ -1,0 +1,14 @@
+Para entrar no site do Ecoleta, faça o seguinte:
+
+1) No navegador, digite na parte de pesquisar:
+localhost:3000
+
+2) Abra o terminal
+
+3) No terminal, escreva:
+npm start
+
+Para deletar alguma entidade, rode "deletar" na página db.js (tem que ver certo 
+o id da entidade que deseja deletar)
+
+Para ver todas as entidades cadastradas, vá também na página db.js

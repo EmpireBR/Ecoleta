@@ -1,0 +1,44 @@
+/* Aqui, toda vez que a variável --title-color for chamada, irá receber
+a cor #322153 (e a primary color também)  */
+:root{
+    --title-color: #322153;
+    --primary-color: #34cb79;
+} 
+
+/* Esse asterisco referencia todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+
+    /* O tamanho da caixa será até a borda */
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background: #f0f0f5; /* Define a cor do background */
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Todos os H's receberão uma cor padrão e o font-family Ubuntu (peguei do fonts.google.com) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+}
+
+/* BOX MODEL
+
+Modelo de caixa
+Toda caixa tem:
+largura, altura, espaçamentos, preenchimentos, bordas,
+cor, fundo, maneira que é vista pelo html (display),
+alinhamentos, posicionamento
+*/
